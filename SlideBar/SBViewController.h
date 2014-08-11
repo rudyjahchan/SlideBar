@@ -10,4 +10,7 @@
 
 @interface SBViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIView *containerView;
+@property (nonatomic) UIViewController *colorController;
+
 @end

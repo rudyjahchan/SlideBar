@@ -16,28 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pq-UC-9xY" userLabel="First">
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pq-UC-9xY">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="qvr-Pa-XD8" kind="embed" id="s5R-Xh-9VU"/>
-                                </connections>
-                            </containerView>
-                            <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBW-kT-eei" userLabel="Second">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="uN5-DP-efE" kind="embed" id="X9x-kf-7tp"/>
-                                </connections>
-                            </containerView>
-                            <containerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrB-uA-ToN" userLabel="Third">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="wzM-Na-uL7" kind="embed" id="PxJ-Pz-pIJ"/>
+                                    <segue destination="qvr-Pa-XD8" kind="embed" identifier="embedRed" id="s5R-Xh-9VU"/>
                                 </connections>
                             </containerView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9l3-KF-KQc">
@@ -64,27 +48,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dBW-kT-eei" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="5bX-5h-7CB"/>
                             <constraint firstItem="7Pq-UC-9xY" firstAttribute="bottom" secondItem="kh9-bI-dsS" secondAttribute="bottom" id="9Ml-DK-9xz"/>
-                            <constraint firstItem="LrB-uA-ToN" firstAttribute="top" secondItem="9l3-KF-KQc" secondAttribute="bottom" id="B94-0v-tjU"/>
                             <constraint firstItem="9l3-KF-KQc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="DNC-Fh-P5f"/>
                             <constraint firstItem="7Pq-UC-9xY" firstAttribute="top" secondItem="9l3-KF-KQc" secondAttribute="bottom" id="Gs1-qJ-eEg"/>
-                            <constraint firstItem="LrB-uA-ToN" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="NIH-ZR-gZ3"/>
-                            <constraint firstItem="dBW-kT-eei" firstAttribute="top" secondItem="9l3-KF-KQc" secondAttribute="bottom" id="TLb-Ll-lYY"/>
                             <constraint firstItem="7Pq-UC-9xY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WGl-0m-C8r"/>
                             <constraint firstItem="9l3-KF-KQc" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="ZDn-c0-j4s"/>
-                            <constraint firstItem="LrB-uA-ToN" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="aZV-TW-yv4"/>
                             <constraint firstItem="9l3-KF-KQc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="d4o-XF-2Sr"/>
-                            <constraint firstItem="dBW-kT-eei" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="e3r-nV-QqH"/>
-                            <constraint firstItem="dBW-kT-eei" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hkb-bx-UhN"/>
                             <constraint firstItem="7Pq-UC-9xY" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailing" id="qCF-T0-pIx"/>
-                            <constraint firstItem="LrB-uA-ToN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="qQi-5r-qvJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="7Pq-UC-9xY" id="iZL-NT-i5Y"/>
+                        <segue destination="uN5-DP-efE" kind="custom" identifier="showBlue" customClass="SBColorSegue" id="dKB-CB-w9Y"/>
+                        <segue destination="wzM-Na-uL7" kind="custom" identifier="showGreen" customClass="SBColorSegue" id="L2k-VZ-GOL"/>
+                        <segue destination="qvr-Pa-XD8" kind="custom" identifier="showRed" customClass="SBColorSegue" id="A3j-71-mpi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="98"/>
+            <point key="canvasLocation" x="-248" y="202"/>
         </scene>
         <!--Color View Controller - Red-->
         <scene sceneID="0Wx-6V-fGA">
@@ -95,7 +77,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pTu-MT-JdE"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ri2-pm-drE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -114,7 +96,7 @@
                         <viewControllerLayoutGuide type="bottom" id="az9-nR-ehb"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SkY-Nn-ujb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -133,7 +115,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vjQ-gP-Cmu"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="l3H-ll-Ywa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -149,4 +131,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="A3j-71-mpi"/>
+    </inferredMetricsTieBreakers>
 </document>

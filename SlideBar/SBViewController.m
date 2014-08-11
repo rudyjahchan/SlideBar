@@ -32,20 +32,26 @@
 
 - (void)didSelectSegment:(id)sender {
     UISegmentedControl *segmentControl = (UISegmentedControl*)sender;
-    UIView *fromView = self.view.subviews[self.lastSelectedSegmentIndex];
-    UIView *toView = self.view.subviews[segmentControl.selectedSegmentIndex];
-    [UIView transitionFromView:fromView
-                        toView:toView
-                      duration:0.5
-                       options:(UIViewAnimationOptionShowHideTransitionViews|UIViewAnimationOptionTransitionFlipFromLeft) completion:^(BOOL finished) {
-                           if (finished) {
-                               self.lastSelectedSegmentIndex = segmentControl.selectedSegmentIndex;
-                           }
-                       }];
+    switch (segmentControl.selectedSegmentIndex) {
+        case 0:
+        default:
+            [self performSegueWithIdentifier:@"showRed" sender:self];
+            break;
+            
+        case 1:
+            [self performSegueWithIdentifier:@"showBlue" sender:self];
+            break;
+            
+        case 2:
+            [self performSegueWithIdentifier:@"showGreen" sender:self];
+            break;
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"%@ %@ %@", NSStringFromSelector(_cmd), segue, sender);
+    if ([segue.identifier isEqualToString:@"embedRed"]) {
+        self.colorController = segue.destinationViewController;
+    }
 }
 
 @end
