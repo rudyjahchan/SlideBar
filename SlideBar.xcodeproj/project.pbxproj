@@ -22,6 +22,7 @@
 		93A763B419986CA000D00103 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A7639319986CA000D00103 /* UIKit.framework */; };
 		93A763BC19986CA000D00103 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93A763BA19986CA000D00103 /* InfoPlist.strings */; };
 		93A763BE19986CA000D00103 /* SlideBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A763BD19986CA000D00103 /* SlideBarTests.m */; };
+		93A763C91998850B00D00103 /* SBColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A763C81998850B00D00103 /* SBColorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		93A763B919986CA000D00103 /* SlideBarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlideBarTests-Info.plist"; sourceTree = "<group>"; };
 		93A763BB19986CA000D00103 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93A763BD19986CA000D00103 /* SlideBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideBarTests.m; sourceTree = "<group>"; };
+		93A763C71998850B00D00103 /* SBColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBColorViewController.h; sourceTree = "<group>"; };
+		93A763C81998850B00D00103 /* SBColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				93A763A819986CA000D00103 /* SBViewController.m */,
 				93A763AA19986CA000D00103 /* Images.xcassets */,
 				93A7639619986CA000D00103 /* Supporting Files */,
+				93A763C71998850B00D00103 /* SBColorViewController.h */,
+				93A763C81998850B00D00103 /* SBColorViewController.m */,
 			);
 			path = SlideBar;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93A7639C19986CA000D00103 /* main.m in Sources */,
+				93A763C91998850B00D00103 /* SBColorViewController.m in Sources */,
 				93A763A919986CA000D00103 /* SBViewController.m in Sources */,
 				93A763A019986CA000D00103 /* SBAppDelegate.m in Sources */,
 			);
